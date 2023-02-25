@@ -3,11 +3,16 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "devo": "nuxt dev -o",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.4.1",
     "nuxt": "^3.2.2"
+  },
+  "dependencies": {
+    "@storyblok/nuxt": "^5.1.0"
   }
 }
