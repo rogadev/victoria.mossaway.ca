@@ -1,4 +1,34 @@
-import { storyblokInit, apiPlugin, callbackComponents, useStoryblokApi } from "@storyblok/svelte";
+// TYPES
+import type { LayoutLoad } from "./$types";
+// ENV VARIABLES
+import { PUBLIC_PREVIEW_STORYBLOK_API_KEY } from "$env/static/public";
+// STORYBLOK
+import { storyblokInit, apiPlugin, useStoryblokApi } from "@storyblok/svelte";
+// COMPONENTS
+import Page from "../components/Page.svelte";
+import Grid from "../components/Grid.svelte";
+import Teaser from "../components/Teaser.svelte";
+import Feature from "../components/Feature.svelte";
+
+export async function load(): LayoutLoad {
+  storyblokInit({
+    accessToken: PUBLIC_PREVIEW_STORYBLOK_API_KEY,
+    use: [apiPlugin],
+    apiOptions: { region: 'us' },
+    components: {
+      feature: Feature,
+      grid: Grid,
+      page: Page,
+      teaser: Teaser,
+    },
+  });
+
+  const storyblokApi = await useStoryblokApi();
+
+  return {
+    storyblokApi: storyblokApi,
+  };
+}
 
 /**
  * NOTES:
@@ -14,21 +44,3 @@ import { storyblokInit, apiPlugin, callbackComponents, useStoryblokApi } from "@
  * 
  * For spaces created in the United States (which we did), the `apiOptions` region is required.
  */
-
-export async function load() {
-  storyblokInit({
-    accessToken: "RKqPB7MAYUawyar0pS29gAtt",
-    use: [apiPlugin],
-    components: callbackComponents,
-    apiOptions: {
-      https: true,
-      region: 'us'
-    },
-  });
-
-  const storyblokApi: any = await useStoryblokApi();
-
-  return {
-    storyblokApi: storyblokApi,
-  };
-}
