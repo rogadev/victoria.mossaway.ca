@@ -1,7 +1,5 @@
 // TYPES
 import type { LayoutLoad } from "./$types";
-// ENV VARIABLES
-import { PUBLIC_PREVIEW_STORYBLOK_API_KEY } from "$env/static/public";
 // STORYBLOK
 import { storyblokInit, apiPlugin, useStoryblokApi } from "@storyblok/svelte";
 // COMPONENTS
@@ -12,9 +10,12 @@ import Feature from "../components/Feature.svelte";
 
 export async function load(): LayoutLoad {
   storyblokInit({
-    accessToken: PUBLIC_PREVIEW_STORYBLOK_API_KEY,
+    accessToken: "v5nokQVun9qCrV93kaAucAtt",
     use: [apiPlugin],
-    apiOptions: { region: 'us' },
+    apiOptions: {
+      https: true,
+      region: 'us'
+    },
     components: {
       feature: Feature,
       grid: Grid,
