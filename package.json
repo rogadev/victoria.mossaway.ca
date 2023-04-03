@@ -35,6 +35,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@storyblok/svelte": "^2.4.11"
+		"@storyblok/svelte": "^2.4.12"
 	}
 }
