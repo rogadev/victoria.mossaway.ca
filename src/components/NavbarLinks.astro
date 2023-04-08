@@ -1,0 +1,18 @@
+---
+const { text } = Astro.props
+---
+
+<template>
+  <a class="nav-link" href="{props.href}" aria-label="{props.label}">{text}</a>
+</template>
+
+<style>
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: var(--brand-color-3);
+  }
+</style>

@@ -1,0 +1,40 @@
+---
+const { quote, customerName, photoSrc } = Astro.props;
+---
+
+<figure class="testimonial">
+  <img src={photoSrc} alt={customerName} />
+  <figcaption>
+    <blockquote>
+      "{quote}"
+    </blockquote>
+    <cite>{customerName}</cite>
+  </figcaption>
+</figure>
+
+<style>
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+    margin: 2rem;
+  }
+
+  .testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .testimonial blockquote {
+    font-style: italic;
+    margin: 1rem 0;
+  }
+
+  .testimonial cite {
+    font-weight: bold;
+  }
+</style>
