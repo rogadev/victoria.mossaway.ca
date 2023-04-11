@@ -1,92 +1,74 @@
 ---
-import Navbar from '../components/Navbar.astro';
-import HeroSection from '../components/HeroSection.astro';
-import RequestQuoteForm from '../components/WebForm.astro';
-import CallToActionButton from '../components/CTAButton.astro';
-import PrimaryButton from '../components/PrimaryButton.astro';
-import CancelButton from '../components/CancelButton.astro';
-import Testimonial from '../components/Testimonial.astro';
-import InfoSectionLeft from '../components/InfoSectionL.astro';
-import InfoSectionRight from '../components/InfoSectionR.astro';
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
+import HeroSection from '../components/HeroSection.astro'
+import RequestQuoteForm from '../components/WebForm.astro'
+import CallToActionButton from '../components/CTAButton.astro'
+import PrimaryButton from '../components/PrimaryButton.astro'
+import CancelButton from '../components/CancelButton.astro'
+import Testimonial from '../components/Testimonial.astro'
+import InfoSectionLeft from '../components/InfoSectionL.astro'
+import InfoSectionRight from '../components/InfoSectionR.astro'
+import Layout from '../layouts/Primary.astro'
 
-const title = "Roof Moss Removal";
-const description = "We are your trusted roof moss removal experts";
+const title = 'Roof Moss Removal'
+const description = 'We are your trusted roof moss removal experts'
 ---
 
-<html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-	</head>
-
-	<body>
-		<header>
-      <Navbar />
-    </header>
-		<main>
-      <article>
-        <HeroSection
-        backgroundImage="https://via.placeholder.com/1920x1080"
-        title="Welcome to Roof Moss Removal"
-        subtitle="We are your trusted roof moss removal experts"
-        />
-      </article>
-		</main>
-    
-    <section id="services">
-      <h2>Our Services</h2>
-      <InfoSectionLeft
-        imageSrc="https://via.placeholder.com/800x600"
-        imageAlt="Service 1"
-        heading="Service 1"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero."
+<Layout title={title} description={description}>
+  <main>
+    <article>
+      <HeroSection
+        backgroundImage='https://via.placeholder.com/1920x1080'
+        title='Welcome to Roof Moss Removal'
+        subtitle='We are your trusted roof moss removal experts'
       />
-      <InfoSectionRight
-        imageSrc="https://via.placeholder.com/800x600"
-        imageAlt="Service 2"
-        heading="Service 2"
-        description="Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet."
-      />
-      <InfoSectionLeft
-        imageSrc="https://via.placeholder.com/800x600"
-        imageAlt="Service 3"
-        heading="Service 3"
-        description="Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta."
-      />
-    </section>
-    
-    <RequestQuoteForm />
+    </article>
+  </main>
 
-    <section id="testimonials">
-      <h2>Testimonials</h2>
-      <Testimonial
-        photoSrc="https://via.placeholder.com/100x100"
-        customerName="John Doe"
-        quote="Roof Moss Removal did a fantastic job! Our roof looks brand new!"
-      />
-      <Testimonial
-        photoSrc="https://via.placeholder.com/100x100"
-        customerName="Jane Smith"
-        quote="The team was professional and efficient. Highly recommend their services."
-      />
-    </section>
+  <section id='services'>
+    <h2>Our Services</h2>
+    <InfoSectionLeft
+      imageSrc='https://via.placeholder.com/800x600'
+      imageAlt='Service 1'
+      heading='Service 1'
+      description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.'
+    />
+    <InfoSectionRight
+      imageSrc='https://via.placeholder.com/800x600'
+      imageAlt='Service 2'
+      heading='Service 2'
+      description='Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.'
+    />
+    <InfoSectionLeft
+      imageSrc='https://via.placeholder.com/800x600'
+      imageAlt='Service 3'
+      heading='Service 3'
+      description='Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
+    />
+  </section>
 
-    <section id="cta">
-      <h2>Ready to get started?</h2>
-      <CallToActionButton text="Get a Free Quote" />
-    </section>
+  <RequestQuoteForm />
 
-    <section id="buttons">
-      <PrimaryButton text="Primary" />
-      <CancelButton text="Cancel" />
-    </section>
+  <section id='testimonials'>
+    <h2>Testimonials</h2>
+    <Testimonial
+      photoSrc='https://via.placeholder.com/100x100'
+      customerName='John Doe'
+      quote='Roof Moss Removal did a fantastic job! Our roof looks brand new!'
+    />
+    <Testimonial
+      photoSrc='https://via.placeholder.com/100x100'
+      customerName='Jane Smith'
+      quote='The team was professional and efficient. Highly recommend their services.'
+    />
+  </section>
 
-		<Footer />
-	</body>
-</html>
+  <section id='cta'>
+    <h2>Ready to get started?</h2>
+    <CallToActionButton text='Get a Free Quote' />
+  </section>
 
-
-
-
-
+  <section id='buttons'>
+    <PrimaryButton text='Primary' />
+    <CancelButton text='Cancel' />
+  </section>
+</Layout>
