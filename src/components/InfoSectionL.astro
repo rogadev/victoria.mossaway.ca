@@ -1,0 +1,55 @@
+---
+const { heading, description, imageSrc, imageAlt } = Astro.props;
+---
+
+<section class="info-section info-left">
+  <div class="container">
+    <figure>
+      <img src={imageSrc} alt={imageAlt} />
+    </figure>
+    <div class="info-content">
+      <h2>{heading}</h2>
+      <p>{description}</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .info-section figure {
+    flex-basis: 100%;
+    margin: 0;
+  }
+
+  .info-section img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .info-section .info-content {
+    flex-basis: 100%;
+    padding: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .info-section {
+      flex-wrap: nowrap;
+    }
+
+    .info-section figure {
+      flex-basis: 50%;
+    }
+
+    .info-section .info-content {
+      flex-basis: 50%;
+    }
+
+    .info-left figure {
+      order: 1;
+    }
+
+    .info-left .info-content {
+      order: 2;
+    }
+  }
+</style>

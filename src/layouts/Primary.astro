@@ -1,0 +1,16 @@
+---
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/global.css">
+  <slot name="styles" />
+  <title><slot name="title">Roof Moss Removal</slot></title>
+</head>
+<body>
+  <slot />
+  <slot name="scripts" />
+</body>
+</html>

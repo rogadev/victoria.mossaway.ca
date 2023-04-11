@@ -1,0 +1,20 @@
+---
+import { awardsImage, reviewsImage, guaranteeImage } from '../consts/image'
+---
+
+<section class='bg-white py-12'>
+  <div class='max-w-6xl mx-auto px-6'>
+    <h3 class='text-3xl font-bold mb-8 text-center'>A Company You Can Trust</h3>
+    <ul class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+      <li class='flex items-center justify-center p-6 rounded-lg'>
+        <img src={awardsImage.src} alt={awardsImage.alt} class='h-12' />
+      </li>
+      <li class='flex items-center justify-center p-6 rounded-lg'>
+        <img src={reviewsImage.src} alt={reviewsImage.alt} class='h-12' />
+      </li>
+      <li class='flex items-center justify-center p-6 rounded-lg'>
+        <img src={guaranteeImage.src} alt={guaranteeImage.alt} class='h-12' />
+      </li>
+    </ul>
+  </div>
+</section>

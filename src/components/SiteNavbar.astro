@@ -1,0 +1,88 @@
+---
+import NavLink from './NavbarLinks.astro';
+---
+
+<template>
+  <header class="navbar">
+    <div class="container">
+      <a href="/" class="brand-logo" aria-label="Brand Logo"></a>
+      <nav class="nav-links" aria-label="Navigation Links">
+        <ul>
+          <li><NavLink href="/services" label="Services" text="Services" /></li>
+          <li><NavLink href="/about" label="About" text="About" /></li>
+          <li><NavLink href="/contact" label="Contact" text="Contact" /></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+</template>
+
+<style>
+  :root {
+    --brand-color-1: #1abc9c;
+    --brand-color-2: #2ecc71;
+    --brand-color-3: #3498db;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--brand-color-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1000;
+  }
+
+  .brand-logo {
+    /* Add your brand logo styles here */
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+  }
+
+  @media (min-width: 768px) {
+    .nav-links {
+      display: flex;
+    }
+
+    .hamburger {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-links--open');
+    });
+  }
+</script>
