@@ -1,13 +1,24 @@
+---
+import {
+  mossRemovalImage,
+  roofMossTreatmentImage,
+  windowCleaningImage,
+  gutterCleaningImage,
+} from '../consts/image'
+---
+
 <section class='bg-gray-100 py-12'>
   <div class='max-w-6xl mx-auto px-6'>
     <h2 class='text-3xl font-bold mb-8 text-center'>Our Services</h2>
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
       <article class='bg-white rounded-lg shadow-lg'>
-        <img
-          src='/path/to/moss-removal.jpg'
-          alt='Effective moss removal services by MossAway'
-          class='w-full h-48 object-cover rounded-t-lg'
-        />
+        <a href={mossRemovalImage.href}>
+          <img
+            src={mossRemovalImage.src}
+            alt={mossRemovalImage.alt}
+            class='w-full h-48 object-cover rounded-t-lg'
+          />
+        </a>
         <div class='p-6'>
           <h3 class='text-xl font-semibold mb-4'>Moss Removal</h3>
           <p class='text-gray-700 mb-4'>
@@ -22,11 +33,13 @@
         </div>
       </article>
       <article class='bg-white rounded-lg shadow-lg'>
-        <img
-          src='/path/to/roof-moss-treatment.jpg'
-          alt='MossAway team performing roof moss treatment'
-          class='w-full h-48 object-cover rounded-t-lg'
-        />
+        <a href={roofMossTreatmentImage.href}>
+          <img
+            src={roofMossTreatmentImage.src}
+            alt={roofMossTreatmentImage.alt}
+            class='w-full h-48 object-cover rounded-t-lg'
+          />
+        </a>
         <div class='p-6'>
           <h3 class='text-xl font-semibold mb-4'>Roof Moss Treatment</h3>
           <p class='text-gray-700 mb-4'>
@@ -41,11 +54,13 @@
         </div>
       </article>
       <article class='bg-white rounded-lg shadow-lg'>
-        <img
-          src='/path/to/window-cleaning.jpg'
-          alt='Professional window cleaning services by MossAway'
-          class='w-full h-48 object-cover rounded-t-lg'
-        />
+        <a href={windowCleaningImage.href}>
+          <img
+            src={windowCleaningImage.src}
+            alt={windowCleaningImage.alt}
+            class='w-full h-48 object-cover rounded-t-lg'
+          />
+        </a>
         <div class='p-6'>
           <h3 class='text-xl font-semibold mb-4'>Window Cleaning</h3>
           <p class='text-gray-700 mb-4'>
@@ -60,11 +75,13 @@
         </div>
       </article>
       <article class='bg-white rounded-lg shadow-lg'>
-        <img
-          src='/path/to/gutter-cleaning.jpg'
-          alt='Expert gutter cleaning services in Victoria, BC'
-          class='w-full h-48 object-cover rounded-t-lg'
-        />
+        <a href={gutterCleaningImage.href}>
+          <img
+            src={gutterCleaningImage.src}
+            alt={gutterCleaningImage.alt}
+            class='w-full h-48 object-cover rounded-t-lg'
+          />
+        </a>
         <div class='p-6'>
           <h3 class='text-xl font-semibold mb-4'>Gutter Cleaning</h3>
           <p class='text-gray-700 mb-4'>

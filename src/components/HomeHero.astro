@@ -1,9 +1,13 @@
+---
+import { heroImage } from '../consts/image'
+---
+
 <section
   class='hero bg-cover bg-center flex flex-col justify-center items-center text-white py-20 px-6'
 >
   <img
-    src='/path/to/background-image.jpg'
-    alt='Beautiful moss-free roof after MossAway treatment'
+    src={heroImage.src}
+    alt={heroImage.alt}
     class='w-full h-full object-cover absolute inset-0 z-0'
   />
   <div class='relative z-10'>
