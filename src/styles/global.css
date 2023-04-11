@@ -32,6 +32,7 @@ h5,
 h6,
 strong,
 b {
+
   color: var(--heading-color);
 }
 
