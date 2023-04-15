@@ -1,19 +1,20 @@
 ---
-import NavLink from './NavbarLinks.astro';
+import NavLink from './NavbarLinks.astro'
+import BrandLogo from './BrandLogo.astro'
 ---
 
 <template>
-  <header class="navbar">
-    <div class="container">
-      <a href="/" class="brand-logo" aria-label="Brand Logo"></a>
-      <nav class="nav-links" aria-label="Navigation Links">
+  <header class='navbar'>
+    <div class='container'>
+      <BrandLogo />
+      <nav class='nav-links' aria-label='Navigation Links'>
         <ul>
-          <li><NavLink href="/services" label="Services" text="Services" /></li>
-          <li><NavLink href="/about" label="About" text="About" /></li>
-          <li><NavLink href="/contact" label="Contact" text="Contact" /></li>
+          <li><NavLink href='/services' label='Services' text='Services' /></li>
+          <li><NavLink href='/about' label='About' text='About' /></li>
+          <li><NavLink href='/contact' label='Contact' text='Contact' /></li>
         </ul>
       </nav>
-      <button class="hamburger" aria-label="Toggle navigation menu">
+      <button class='hamburger' aria-label='Toggle navigation menu'>
         <span></span>
         <span></span>
         <span></span>
@@ -77,12 +78,12 @@ import NavLink from './NavbarLinks.astro';
 </style>
 
 <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
+  const hamburger = document.querySelector('.hamburger')
+  const navLinks = document.querySelector('.nav-links')
 
   if (hamburger && navLinks) {
     hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('nav-links--open');
-    });
+      navLinks.classList.toggle('nav-links--open')
+    })
   }
 </script>

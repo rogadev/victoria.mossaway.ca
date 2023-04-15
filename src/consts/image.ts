@@ -1,46 +1,46 @@
 import { home, mossRemoval, roofMossTreatment, windowCleaning, gutterCleaning, reviews } from './page';
 
 export const heroImage = {
-  src: "/background-image.jpg",
+  src: "/img/bg/beautiful-moss-free-home.jpg",
   alt: "Beautiful moss-free roof after MossAway treatment",
 };
 
 export const mossRemovalImage = {
-  src: "/moss-removal.jpg",
+  src: "/img/moss-monsters/nightmare-moss-monster-5.jpg",
   alt: "Effective moss removal services by MossAway",
   href: mossRemoval.link,
 };
 
 export const roofMossTreatmentImage = {
-  src: "/roof-moss-treatment.jpg",
+  src: "/img/moss-monsters/moss-monster-getting-sprayed-9.jpg",
   alt: "MossAway team performing roof moss treatment",
   href: roofMossTreatment.link,
 };
 
 export const windowCleaningImage = {
-  src: "/window-cleaning.jpg",
+  src: "/img/moss-monsters/moss-monster-washing-windows.jpg",
   alt: "Professional window cleaning services by MossAway",
   href: windowCleaning.link,
 };
 
 export const gutterCleaningImage = {
-  src: "/gutter-cleaning.jpg",
+  src: "/img/moss-monsters/moss-monster-playing-in-the-rain.jpg",
   alt: "Expert gutter cleaning services in Victoria, BC",
   href: gutterCleaning.link,
 };
 
 export const awardsImage = {
-  src: "/awards-image.png",
+  src: "/img/moss-monsters/award-winning-moss-monster-2.jpg",
   alt: "Awards or certifications",
 };
 
 export const reviewsImage = {
-  src: "/reviews-image.png",
+  src: "/img/moss-monsters/moss-monster-about-to-be-crushed-by-review-stars.jpg",
   alt: "Reviews or ratings",
   href: reviews.link,
 };
 
 export const guaranteeImage = {
-  src: "/guarantee-image.png",
+  src: "/img/moss-monsters/moss-free-guarantee.jpg",
   alt: "Satisfaction guarantee",
 };
