@@ -1,9 +1,9 @@
 <script>
   import { createEventDispatcher } from 'svelte';
+  export let ariaLabel
 
   const dispatch = createEventDispatcher();
   let isOpen = false;
-  export let ariaLabel
 
   function toggleMenu() {
     isOpen = !isOpen;
@@ -17,7 +17,7 @@
   }
 
   .line-1.open {
-    transform: translateY(0.6rem) rotate(45deg);
+    transform: translateY(0.4rem) rotate(45deg);
   }
 
   .line-2.open {
@@ -25,27 +25,27 @@
   }
 
   .line-3.open {
-    transform: translateY(-0.6rem) rotate(-45deg);
+    transform: translateY(-0.4rem) rotate(-45deg);
   }
 </style>
 
 <button
   type="button"
-  class="flex items-center cursor-pointer"
+  class="flex flex-col items-center justify-center cursor-pointer p-1 m-1"
   on:click={toggleMenu}
   aria-label={ariaLabel}
   tabindex="0"
 >
   <div
-    class="w-6 h-0.5 bg-current text-current rounded-full line line-1"
+    class="w-6 h-0.5 bg-text rounded-full line line-1"
     class:open={isOpen}
   ></div>
   <div
-    class="w-6 h-0.5 bg-current text-current rounded-full line line-2 mt-1"
+    class="w-6 h-0.5 bg-text rounded-full line line-2 mt-1"
     class:open={isOpen}
   ></div>
   <div
-    class="w-6 h-0.5 bg-current text-current rounded-full line line-3 mt-1"
+    class="w-6 h-0.5 bg-text rounded-full line line-3 mt-1"
     class:open={isOpen}
   ></div>
 </button>

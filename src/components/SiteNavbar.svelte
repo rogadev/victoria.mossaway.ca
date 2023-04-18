@@ -36,7 +36,7 @@
     </nav>
 
     <div class="lg:hidden">
-      <Hamburger on:click={toggleMobileMenu} ariaLabel="Toggle mobile menu" />
+      <Hamburger on:toggle={toggleMobileMenu} ariaLabel="Toggle mobile menu" />
 
       {#if showMobileMenu}
         <nav class="absolute right-0 mt-3 bg-background shadow-md rounded p-2 z-10">

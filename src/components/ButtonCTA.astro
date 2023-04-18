@@ -1,4 +1,15 @@
-<button class="cta-btn" aria-label="Call to Action">Get Started</button>
+---
+export interface AstroProps {
+  ariaLabel: string
+  href: string
+}
+
+const { ariaLabel, href } = Astro.props
+---
+
+<a href={href} class='cta-btn' aria-label={ariaLabel}>
+  <slot />
+</a>
 
 <style>
   .cta-btn {
