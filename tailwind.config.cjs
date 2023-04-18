@@ -2,8 +2,7 @@
 module.exports = {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   mode: 'jit',
-  purge: ['./src/**/*.astro'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: 'media',
   theme: {
     colors: {
       primary: '#345c4c',

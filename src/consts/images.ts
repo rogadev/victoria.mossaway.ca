@@ -1,4 +1,4 @@
-import { home, mossRemoval, roofMossTreatment, windowCleaning, gutterCleaning, reviews } from './page';
+import { home, mossRemoval, roofMossTreatment, windowCleaning, gutterCleaning, reviews } from './pages';
 
 export const heroImage = {
   src: "/img/bg/beautiful-moss-free-home.jpg",

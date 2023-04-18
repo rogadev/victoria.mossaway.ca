@@ -1,29 +1,17 @@
 ---
-import { home } from '../consts/page'
-import BaseHead from '../components/BaseHead.astro'
-import SiteHeader from '../components/SiteHeader.astro'
-import SiteFooter from '../components/SiteFooter.astro'
+import { home } from '../consts/pages'
 import HomeHero from '../components/HomeHero.astro'
 import HomeServices from '../components/HomeServices.astro'
 import HomeSocialProof from '../components/HomeSocialProof.astro'
 import HomeFAQ from '../components/HomeFAQ.astro'
 import HomeContact from '../components/HomeContact.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <BaseHead title={home.title} description={home.description} />
-  </head>
-  <body>
-    <SiteHeader />
-    <main>
-      <HomeHero />
-      <HomeServices />
-      <HomeSocialProof />
-      <HomeFAQ />
-      <HomeContact />
-    </main>
-    <SiteFooter />
-  </body>
-</html>
+<BaseLayout title={home.title} description={home.description}>
+  <HomeHero />
+  <HomeServices />
+  <HomeSocialProof />
+  <HomeFAQ />
+  <HomeContact />
+</BaseLayout>

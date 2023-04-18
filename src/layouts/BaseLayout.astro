@@ -1,0 +1,23 @@
+---
+import BaseHead from '../components/BaseHead.astro'
+import BaseHeader from '../components/BaseHeader.astro'
+
+const { title, description, image } = Astro.props
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='/styles/global.css' />
+    <slot name='styles' />
+    <BaseHead title={title} description={description} image={image} />
+  </head>
+  <body>
+    <BaseHeader>
+      <slot name='header' />
+    </BaseHeader>
+    <slot />
+    <slot name='scripts' />
+  </body>
+</html>
