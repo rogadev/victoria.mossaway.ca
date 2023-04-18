@@ -1,3 +1,7 @@
+---
+import ButtonCTA from './ButtonCTA.astro'
+---
+
 <section
   class='hero bg-contain bg-center flex flex-col justify-center items-center text-white py-20 px-6'
 >
@@ -9,12 +13,7 @@
       Safe, Affordable, and Environmentally Friendly Solutions
     </h2>
     <div class='flex justify-center'>
-      <a
-        href='/request-quote'
-        class='bg-accent1 text-secondary hover:bg-yellow-500 font-medium rounded-lg px-8 py-4 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110 mx-auto'
-      >
-        Request a Free Quote
-      </a>
+      <ButtonCTA href='/request-quote'>Request a Free Quote</ButtonCTA>
     </div>
   </div>
 </section>

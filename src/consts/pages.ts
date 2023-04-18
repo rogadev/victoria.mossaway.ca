@@ -64,12 +64,11 @@ export const reviews = {
 
 export const pages =
   [
-    home,
     mossRemoval,
     roofMossTreatment,
     windowCleaning,
     gutterCleaning,
     faq,
+    reviews,
     contact,
-    reviews
   ];

@@ -1,0 +1,18 @@
+---
+import ButtonCTA from '../components/ButtonCTA.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { roofMossTreatment } from '../consts/pages'
+const { title, description } = roofMossTreatment
+---
+
+<BaseLayout title={title} description={description}>
+  <div slot='header'>
+    <h1>Roof Moss Treatment</h1>
+    <div class='flex jusitify-center items-center'>
+      <ButtonCTA href='/contact'>Request A Quote</ButtonCTA>
+    </div>
+  </div>
+  <div>
+    <p>Hello World</p>
+  </div>
+</BaseLayout>
