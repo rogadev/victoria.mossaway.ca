@@ -1,19 +1,19 @@
 ---
 import HeroSection from '../components/HeroSection.astro'
 import RequestQuoteForm from '../components/WebForm.astro'
-import CallToActionButton from '../components/CTAButton.astro'
+import CTAButton from '../components/ButtonCTA.astro'
+import CancelButton from '../components/ButtonCancel.astro'
 import PrimaryButton from '../components/PrimaryButton.astro'
-import CancelButton from '../components/CancelButton.astro'
 import Testimonial from '../components/Testimonial.astro'
 import InfoSectionLeft from '../components/InfoSectionL.astro'
 import InfoSectionRight from '../components/InfoSectionR.astro'
-import Layout from '../layouts/Primary.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
 
 const title = 'Roof Moss Removal'
 const description = 'We are your trusted roof moss removal experts'
 ---
 
-<Layout title={title} description={description}>
+<BaseLayout title={title} description={description}>
   <main>
     <article>
       <HeroSection
@@ -64,11 +64,11 @@ const description = 'We are your trusted roof moss removal experts'
 
   <section id='cta'>
     <h2>Ready to get started?</h2>
-    <CallToActionButton text='Get a Free Quote' />
+    <CTAButton text='Get a Free Quote' />
   </section>
 
   <section id='buttons'>
     <PrimaryButton text='Primary' />
     <CancelButton text='Cancel' />
   </section>
-</Layout>
+</BaseLayout>
