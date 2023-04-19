@@ -5,96 +5,41 @@ import {
   windowCleaningImage,
   gutterCleaningImage,
 } from '../consts/images'
+import Article from './HomeServicesArticle.astro'
 ---
 
 <section class='bg-gray-100 py-12'>
   <div class='max-w-6xl mx-auto px-6'>
     <h2 class='text-3xl font-bold mb-8 text-center'>Our Services</h2>
     <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-      <article class='bg-white rounded-lg shadow-lg'>
-        <a href={mossRemovalImage.href}>
-          <img
-            src={mossRemovalImage.src}
-            alt={mossRemovalImage.alt}
-            class='w-full h-48 object-cover rounded-t-lg'
-          />
-        </a>
-        <div class='p-6'>
-          <h3 class='text-xl font-semibold mb-4'>Roof Moss Removal</h3>
-          <p class='text-gray-700 mb-4'>
-            Our expert technicians use eco-friendly treatments and methods to
-            safely and effectively remove moss from your roof.
-          </p>
-          <a
-            href='/moss-removal'
-            class='bg-accent1 text-secondary hover:bg-yellow-500 font-medium rounded-lg px-4 py-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110'
-            >Learn More</a
-          >
-        </div>
-      </article>
-      <article class='bg-white rounded-lg shadow-lg'>
-        <a href={roofMossTreatmentImage.href}>
-          <img
-            src={roofMossTreatmentImage.src}
-            alt={roofMossTreatmentImage.alt}
-            class='w-full h-48 object-cover rounded-t-lg'
-          />
-        </a>
-        <div class='p-6'>
-          <h3 class='text-xl font-semibold mb-4'>Roof Moss Treatment</h3>
-          <p class='text-gray-700 mb-4'>
-            We offer preventative treatments to help keep moss from returning to
-            your roof, saving you time and money in the long run.
-          </p>
-          <a
-            href='/roof-moss-treatment'
-            class='bg-accent1 text-secondary hover:bg-yellow-500 font-medium rounded-lg px-4 py-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110'
-            >Learn More</a
-          >
-        </div>
-      </article>
-      <article class='bg-white rounded-lg shadow-lg'>
-        <a href={windowCleaningImage.href}>
-          <img
-            src={windowCleaningImage.src}
-            alt={windowCleaningImage.alt}
-            class='w-full h-48 object-cover rounded-t-lg'
-          />
-        </a>
-        <div class='p-6'>
-          <h3 class='text-xl font-semibold mb-4'>Window Cleaning</h3>
-          <p class='text-gray-700 mb-4'>
-            Our professional window cleaning services will make your windows
-            sparkle and shine, inside and out.
-          </p>
-          <a
-            href='/window-cleaning'
-            class='bg-accent1 text-secondary hover:bg-yellow-500 font-medium rounded-lg px-4 py-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110'
-            >Learn More</a
-          >
-        </div>
-      </article>
-      <article class='bg-white rounded-lg shadow-lg'>
-        <a href={gutterCleaningImage.href}>
-          <img
-            src={gutterCleaningImage.src}
-            alt={gutterCleaningImage.alt}
-            class='w-full h-48 object-cover rounded-t-lg'
-          />
-        </a>
-        <div class='p-6'>
-          <h3 class='text-xl font-semibold mb-4'>Gutter Cleaning</h3>
-          <p class='text-gray-700 mb-4'>
-            Our expert technicians will ensure that your gutters are clean and
-            functioning properly to protect your home from water damage.
-          </p>
-          <a
-            href='/gutter-cleaning'
-            class='bg-accent1 text-secondary hover:bg-yellow-500 font-medium rounded-lg px-4 py-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110'
-            >Learn More</a
-          >
-        </div>
-      </article>
+      <Article
+        heading='Roof Moss Removal'
+        href={mossRemovalImage.href}
+        src={mossRemovalImage.src}
+        alt={mossRemovalImage.alt}
+        paragraph='Our expert technicians use eco-friendly treatments and methods to safely and effectively remove moss from your roof.'
+      />
+      <Article
+        heading='Roof Moss Treatment'
+        href={roofMossTreatmentImage.href}
+        src={roofMossTreatmentImage.src}
+        alt={roofMossTreatmentImage.alt}
+        paragraph='We offer preventative treatments to help keep moss from returning to your roof, saving you time and money in the long run.'
+      />
+      <Article
+        heading='Window Cleaning'
+        href={windowCleaningImage.href}
+        src={windowCleaningImage.src}
+        alt={windowCleaningImage.alt}
+        paragraph='Our professional window cleaning services will make your windows & skylights sparkle and shine, inside and out.'
+      />
+      <Article
+        heading='Gutter Cleaning'
+        href={gutterCleaningImage.href}
+        src={gutterCleaningImage.src}
+        alt={gutterCleaningImage.alt}
+        paragraph='Our expert technicians will ensure that your gutters are clean and functioning properly to protect your home from water damage.'
+      />
     </div>
   </div>
 </section>

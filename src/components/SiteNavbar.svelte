@@ -39,7 +39,7 @@
       <Hamburger on:toggle={toggleMobileMenu} ariaLabel="Toggle mobile menu" />
 
       {#if showMobileMenu}
-        <nav class="absolute right-0 mt-3 bg-background shadow-md rounded p-2 z-10">
+        <nav class="absolute right-0 mt-3 bg-background shadow-md rounded p-2 z-50">
           {#each pages as page}
             <a
               href={page.link}
