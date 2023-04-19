@@ -1,5 +1,4 @@
 ---
-import HeroSection from '../components/HeroSection.astro'
 import RequestQuoteForm from '../components/WebForm.astro'
 import CTAButton from '../components/ButtonCTA.astro'
 import CancelButton from '../components/ButtonCancel.astro'
@@ -8,22 +7,20 @@ import Testimonial from '../components/Testimonial.astro'
 import InfoSectionLeft from '../components/InfoSectionL.astro'
 import InfoSectionRight from '../components/InfoSectionR.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
-
-const title = 'Roof Moss Removal'
-const description = 'We are your trusted roof moss removal experts'
+import { mossRemoval } from '../consts/pages'
+const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
+  mossRemoval
 ---
 
-<BaseLayout title={title} description={description}>
-  <main>
-    <article>
-      <HeroSection
-        backgroundImage='https://via.placeholder.com/1920x1080'
-        title='Welcome to Roof Moss Removal'
-        subtitle='We are your trusted roof moss removal experts'
-      />
-    </article>
-  </main>
-
+<BaseLayout
+  h1={h1}
+  h2={h2}
+  title={title}
+  description={description}
+  bgImage={bgImage}
+  overlayColor={overlayColor}
+  overlayIntensity={overlayIntensity}
+>
   <section id='services'>
     <h2>Our Services</h2>
     <InfoSectionLeft

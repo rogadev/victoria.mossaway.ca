@@ -1,9 +1,8 @@
 ---
-import ButtonCTA from '../components/ButtonCTA.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
-import { roofMossTreatment } from '../consts/pages'
+import { requestQuote } from '../consts/pages'
 const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
-  roofMossTreatment
+  requestQuote
 ---
 
 <BaseLayout
@@ -15,12 +14,7 @@ const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
   overlayColor={overlayColor}
   overlayIntensity={overlayIntensity}
 >
-  <div slot='header'>
-    <div class='flex flex-col jusitify-center items-center'>
-      <ButtonCTA href='/contact'>Request A Quote</ButtonCTA>
-    </div>
-  </div>
   <div>
-    <!-- TODO add content -->
+    <!-- TODO Form Goes Here -->
   </div>
 </BaseLayout>

@@ -1,11 +1,19 @@
-<div class='prose'>
-  <header>
-    <h1>Contact Us</h1>
-    <p>
-      If you're looking for a quote, fill out our "request a quote" form.
-      Otherwise, the best way to contact us is by email or phone.
-    </p>
-  </header>
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { contact } from '../consts/pages'
+const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
+  contact
+---
+
+<BaseLayout
+  h1={h1}
+  h2={h2}
+  title={title}
+  description={description}
+  bgImage={bgImage}
+  overlayColor={overlayColor}
+  overlayIntensity={overlayIntensity}
+>
   <main>
     <section>
       <h2>Request A Quote</h2>
@@ -34,4 +42,4 @@
       <p>Call us at <a href='tel:778-966-6677'>778-966-6677</a></p>
     </section>
   </main>
-</div>
+</BaseLayout>
