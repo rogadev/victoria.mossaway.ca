@@ -143,6 +143,15 @@ export const requestQuote = {
   h1: 'Request a Free Quote for Exterior Cleaning Services',
 };
 
+export const about = {
+  link: '/about',
+  name: 'About Us',
+  title: 'About Us | MossAway',
+  description: 'MossAway is a family-owned and operated business that provides exterior cleaning services in Victoria, BC. We specialize in roof moss removal, roof moss treatment, gutter cleaning, and window cleaning. Contact us today for a free quote!',
+  keywords: 'about us, exterior cleaning, free quote',
+  h1: 'About Us',
+};
+
 export const pages =
   [
     mossRemoval,
