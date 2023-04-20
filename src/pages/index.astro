@@ -6,25 +6,23 @@ import HomeFAQ from '../components/HomeFAQ.astro'
 import HomeContact from '../components/HomeContact.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { home } from '../consts/pages'
-const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
-  home
+import WebForm from '../components/WebForm.astro'
+const { h1, title, description } = home
 ---
 
-<BaseLayout
-  h1={h1}
-  h2={h2}
-  title={title}
-  description={description}
-  bgImage={bgImage}
-  overlayColor={overlayColor}
-  overlayIntensity={overlayIntensity}
->
+<BaseLayout h1={h1} title={title} description={description}>
   <div slot='header'>
     <div class='flex justify-center'>
       <ButtonCTA href='/request-quote'>Request a Free Quote</ButtonCTA>
     </div>
   </div>
   <HomeServices />
+  <div class='mx-auto w-full'>
+    <h2 class='text-center text-3xl mt-10 font-semibold'>
+      Request A Free Quote
+    </h2>
+    <WebForm client:screen />
+  </div>
   <HomeSocialProof />
   <HomeFAQ />
   <HomeContact />

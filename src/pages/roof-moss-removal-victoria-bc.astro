@@ -8,19 +8,10 @@ import InfoSectionLeft from '../components/InfoSectionL.astro'
 import InfoSectionRight from '../components/InfoSectionR.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { mossRemoval } from '../consts/pages'
-const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
-  mossRemoval
+const { h1, title, description } = mossRemoval
 ---
 
-<BaseLayout
-  h1={h1}
-  h2={h2}
-  title={title}
-  description={description}
-  bgImage={bgImage}
-  overlayColor={overlayColor}
-  overlayIntensity={overlayIntensity}
->
+<BaseLayout h1={h1} title={title} description={description}>
   <section id='services'>
     <h2>Our Services</h2>
     <InfoSectionLeft

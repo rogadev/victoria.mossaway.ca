@@ -1,19 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { windowCleaning } from '../consts/pages'
-const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
-  windowCleaning
+const { h1, title, description } = windowCleaning
 ---
 
-<BaseLayout
-  h1={h1}
-  h2={h2}
-  title={title}
-  description={description}
-  bgImage={bgImage}
-  overlayColor={overlayColor}
-  overlayIntensity={overlayIntensity}
->
+<BaseLayout h1={h1} title={title} description={description}>
   <section>
     <h2>Window Cleaning Services We Offer</h2>
     <ul>
@@ -67,7 +58,3 @@ const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
     </p>
   </section>
 </BaseLayout>
-
-<aside>
-  <!-- Add any additional content, like testimonials or promotions, here -->
-</aside>

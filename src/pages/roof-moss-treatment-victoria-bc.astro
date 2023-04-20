@@ -2,19 +2,10 @@
 import ButtonCTA from '../components/ButtonCTA.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { roofMossTreatment } from '../consts/pages'
-const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
-  roofMossTreatment
+const { h1, title, description } = roofMossTreatment
 ---
 
-<BaseLayout
-  h1={h1}
-  h2={h2}
-  title={title}
-  description={description}
-  bgImage={bgImage}
-  overlayColor={overlayColor}
-  overlayIntensity={overlayIntensity}
->
+<BaseLayout h1={h1} title={title} description={description}>
   <div slot='header'>
     <div class='flex flex-col jusitify-center items-center'>
       <ButtonCTA href='/contact'>Request A Quote</ButtonCTA>

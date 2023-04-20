@@ -1,20 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { requestQuote } from '../consts/pages'
-const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
-  requestQuote
+import WebForm from '../components/WebForm.astro'
+const { h1, title, description } = requestQuote
 ---
 
-<BaseLayout
-  h1={h1}
-  h2={h2}
-  title={title}
-  description={description}
-  bgImage={bgImage}
-  overlayColor={overlayColor}
-  overlayIntensity={overlayIntensity}
->
-  <div>
-    <!-- TODO Form Goes Here -->
-  </div>
+<BaseLayout h1={h1} title={title} description={description}>
+  <WebForm />
 </BaseLayout>
