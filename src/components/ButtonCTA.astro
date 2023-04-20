@@ -19,10 +19,16 @@ const { ariaLabel, href } = Astro.props
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.4s;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: none;
   }
 
   .cta-btn:hover {
     background-color: var(--brand-color-3);
+    letter-spacing: 3px;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.2);
   }
 </style>

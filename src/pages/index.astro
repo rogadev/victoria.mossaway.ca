@@ -1,16 +1,28 @@
 ---
-import { home } from '../consts/pages'
-import HomeHero from '../components/HomeHero.astro'
+import ButtonCTA from '../components/ButtonCTA.astro'
 import HomeServices from '../components/HomeServices.astro'
 import HomeSocialProof from '../components/HomeSocialProof.astro'
 import HomeFAQ from '../components/HomeFAQ.astro'
 import HomeContact from '../components/HomeContact.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { home } from '../consts/pages'
+import WebForm from '../components/WebForm.astro'
+const { h1, title, description } = home
 ---
 
-<BaseLayout title={home.title} description={home.description}>
-  <HomeHero />
+<BaseLayout h1={h1} title={title} description={description}>
+  <div slot='header'>
+    <div class='flex justify-center'>
+      <ButtonCTA href='/request-quote'>Request a Free Quote</ButtonCTA>
+    </div>
+  </div>
   <HomeServices />
+  <div class='mx-auto w-full'>
+    <h2 class='text-center text-3xl mt-10 font-semibold'>
+      Request A Free Quote
+    </h2>
+    <WebForm client:screen />
+  </div>
   <HomeSocialProof />
   <HomeFAQ />
   <HomeContact />

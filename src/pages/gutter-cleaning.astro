@@ -1,16 +1,22 @@
-<header>
-  <!-- Add your website header and navigation here -->
-</header>
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { gutterCleaning } from '../consts/pages'
+const { h1, h2, title, description, bgImage, overlayColor, overlayIntensity } =
+  gutterCleaning
+---
 
-<main>
+<BaseLayout
+  h1={h1}
+  h2={h2}
+  title={title}
+  description={description}
+  bgImage={bgImage}
+  overlayColor={overlayColor}
+  overlayIntensity={overlayIntensity}
+>
   <article>
     <h1>Gutter Cleaning in Victoria</h1>
-    <p>
-      Choose a company that cares about its customers & reputation. MossAway has
-      been nominated for a Better Business Bureau Torch Award because we care
-      about the customer service that we deliver. Just read a few of our reviews
-      & testimonials.
-    </p>
+    <p></p>
 
     <section>
       <h2>Why Choose MossAway for Gutter Cleaning</h2>
@@ -56,8 +62,4 @@
       </p>
     </section>
   </article>
-</main>
-
-<aside>
-  <!-- Add any additional content, like testimonials or promotions, here -->
-</aside>
+</BaseLayout>

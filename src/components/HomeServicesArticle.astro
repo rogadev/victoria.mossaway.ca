@@ -1,0 +1,21 @@
+---
+import ButtonCTA from './ButtonCTA.astro'
+const { href, src, alt, heading, paragraph } = Astro.props
+---
+
+<article class='bg-white rounded-lg shadow-lg flex flex-col justify-between'>
+  <a href={href}>
+    <img src={src} alt={alt} class='w-full h-48 object-cover rounded-t-lg' />
+  </a>
+  <div class='px-6 pt-6 flex flex-col justify-between'>
+    <div>
+      <h3 class='text-xl font-semibold mb-4'>{heading}</h3>
+      <p class='text-gray-700 mb-4'>
+        {paragraph}
+      </p>
+    </div>
+  </div>
+  <div class='p-6 flex flex-col'>
+    <ButtonCTA ariaLabel={false} href={href}>Learn More</ButtonCTA>
+  </div>
+</article>
