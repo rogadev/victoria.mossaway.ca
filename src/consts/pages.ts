@@ -17,23 +17,33 @@ export const mossRemoval = {
   sections: [
     {
       title: 'Delicate Hand Brushing Technique',
-      content: "MossAway's roof moss removal process uses a delicate hand brushing technique in conjunction with our pole brush work.This allows us to safely and effectively remove moss from your roof without causing any damage.Once the moss is loose, we use a leaf blower to get all small moss particles, spores, etc.off the roof."
+      content: "MossAway's roof moss removal process uses a delicate hand brushing technique in conjunction with our pole brush work.This allows us to safely and effectively remove moss from your roof without causing any damage.Once the moss is loose, we use a leaf blower to get all small moss particles, spores, etc.off the roof.",
+      imgSrc: '/img/moss-monsters/big-scary-moss-monster-sunset.jpg',
+      imgAlt: 'Big, scary moss monster, taking over your roof'
     },
     {
       title: 'Gutter Cleaning and Cleanup',
-      content: 'As part of our roof moss removal and treatment service, we clean the gutters to ensure they are free from moss and debris. This is included in the price of our service. We also provide a detailed cleanup of the surrounding areas once the service is complete. We aim to remove as much moss as possible and leave the area clean and tidy.'
+      content: 'As part of our roof moss removal and treatment service, we clean the gutters to ensure they are free from moss and debris. This is included in the price of our service. We also provide a detailed cleanup of the surrounding areas once the service is complete. We aim to remove as much moss as possible and leave the area clean and tidy.',
+      imgSrc: '/img/moss-monsters/moss-monster-playing-in-the-rain.jpg',
+      imgAlt: 'Moss monster playing in your clogged gutters'
     },
     {
       title: 'Eco-Friendly Treatment Solution',
-      content: 'Our roof moss treatment uses our roof-safe, effective, eco-friendly treatment solution, the West Coast Wash. This solution is made up of 2 chemicals that we use depending on the situation. Our hydrogen-peroxide based West Coast Wash is typically used, but occasionally we use a traditional soft wash solution for tough algae staining. Our evaluator will recommend the right chemical for the job and build your quote accordingly.'
+      content: 'Our roof moss treatment uses our roof-safe, effective, eco-friendly treatment solution, the West Coast Wash. This solution is made up of 2 chemicals that we use depending on the situation. Our hydrogen-peroxide based West Coast Wash is typically used, but occasionally we use a traditional soft wash solution for tough algae staining. Our evaluator will recommend the right chemical for the job and build your quote accordingly.',
+      imgSrc: '/img/moss-monsters/moss-monster-getting-sprayed-9.jpg',
+      imgAlt: 'Roof moss monster getting sprayed with eco friendly treatment solution'
     },
     {
       title: 'Safety First',
-      content: 'Roof work can be dangerous, which is why we take safety very seriously. MossAway uses rope and harness as required by WorkSafeBC, as well as special feet on our ladders to provide extra stability and safety. We also use ladder standoffs which keep ladders from damaging gutter exteriors while also adding even more stability and safety to our ladder setups.'
+      content: 'Roof work can be dangerous, which is why we take safety very seriously. MossAway uses rope and harness as required by WorkSafeBC, as well as special feet on our ladders to provide extra stability and safety. We also use ladder standoffs which keep ladders from damaging gutter exteriors while also adding even more stability and safety to our ladder setups.',
+      imgSrc: '/img/moss-monsters/moss-monster-in-a-hard-hat-3.jpg',
+      imgAlt: 'Moss monster taking roof safety very seriously'
     },
     {
       title: 'Affordable Quality Service',
-      content: 'MossAway strives to be the most affordable quality service provider in Victoria, BC. We have been in the business for several years, and have earned a BBB A+ rating and the 2019 BBB Torch Award winners in specialty cleaning. We offer free quotes, and have excellent online reviews and ratings. We handle projects of all sizes, both residential and commercial.'
+      content: 'MossAway strives to be the most affordable quality service provider in Victoria, BC. We have been in the business for several years, and have earned a BBB A+ rating and the 2019 BBB Torch Award winners in specialty cleaning. We offer free quotes, and have excellent online reviews and ratings. We handle projects of all sizes, both residential and commercial.',
+      imgSrc: '/img/moss-monsters/moss-monster-counting-his-money.jpg',
+      imgAlt: 'Roof moss monster counting up his stack of cash after saving tons of money by hiring MossAway'
     }
   ]
 };
@@ -48,15 +58,21 @@ export const roofMossTreatment = {
   sections: [
     {
       title: 'Our Treatment Process',
-      content: "MossAway's roof moss treatment process uses our roof-safe, effective, and eco-friendly treatment solution, the West Coast Wash. This solution is made up of 2 chemicals that we use depending on the situation. Our hydrogen-peroxide based West Coast Wash is typically used, but occasionally we use a traditional soft wash solution for tough algae staining. Our evaluator will recommend the right chemical for the job and build your quote accordingly. We apply the treatment solution evenly across the roof, ensuring complete coverage."
+      content: "MossAway's roof moss treatment process uses our roof-safe, effective, and eco-friendly treatment solution, the West Coast Wash. This solution is made up of 2 chemicals that we use depending on the situation. Our hydrogen-peroxide based West Coast Wash is typically used, but occasionally we use a traditional soft wash solution for tough algae staining. Our evaluator will recommend the right chemical for the job and build your quote accordingly. We apply the treatment solution evenly across the roof, ensuring complete coverage.",
+      imgSrc: '/img/moss-monsters/moss-monster-getting-sprayed-7.jpg',
+      imgAlt: 'Poor little roof moss monster getting sprayed with eco friendly treatment solution'
     },
     {
       title: 'Eco-Friendly and Safe for Your Roof',
-      content: 'The West Coast Wash is a roof-safe and effective treatment solution that is eco-friendly and biodegradable. It won\'t harm your roof or the environment, and will keep your roof moss-free for years to come. Our team is trained and certified to handle the chemicals safely and responsibly, so you can trust us to do the job right.'
+      content: 'The West Coast Wash is a roof-safe and effective treatment solution that is eco-friendly and biodegradable. It won\'t harm your roof or the environment, and will keep your roof moss-free for years to come. Our team is trained and certified to handle the chemicals safely and responsibly, so you can trust us to do the job right.',
+      imgSrc: '/img/moss-monsters/moss-monster-getting-sprayed-8.jpg',
+      imgAlt: 'A roof moss monster runs away from the eco friendly treatment solution'
     },
     {
       title: 'Affordable Quality Service',
-      content: 'MossAway strives to be the most affordable quality service provider in Victoria, BC. We have been in the business for several years, and have earned a BBB A+ rating and the 2019 BBB Torch Award winners in specialty cleaning. We offer free quotes, and have excellent online reviews and ratings. We handle projects of all sizes, both residential and commercial.'
+      content: 'MossAway strives to be the most affordable quality service provider in Victoria, BC. We have been in the business for several years, and have earned a BBB A+ rating and the 2019 BBB Torch Award winners in specialty cleaning. We offer free quotes, and have excellent online reviews and ratings. We handle projects of all sizes, both residential and commercial.',
+      imgSrc: '/img/moss-monsters/moss-monster-getting-sprayed-5.jpg',
+      imgAlt: 'A big roof moss monster with foamy, eco-friendly treatment solution on his head'
     }
   ]
 };
@@ -71,15 +87,21 @@ export const windowCleaning = {
   sections: [
     {
       title: 'Our Window Cleaning Process',
-      content: 'MossAway uses a hybrid approach of traditional window cleaning and waterfed pole to provide a high-quality clean. Our waterfed pole system uses super pure water to wash away dirt, grime, and debris, leaving behind a clean, spot-free finish. We also offer optional screen cleaning, and if the customer removes the screens ahead of our service, we add in the screen cleaning for free. For properties with security screens, we may require inside access if the team is performing screen removal and cleaning services.'
+      content: 'MossAway uses a hybrid approach of traditional window cleaning and waterfed pole to provide a high-quality clean. Our waterfed pole system uses super pure water to wash away dirt, grime, and debris, leaving behind a clean, spot-free finish. We also offer optional screen cleaning, and if the customer removes the screens ahead of our service, we add in the screen cleaning for free. For properties with security screens, we may require inside access if the team is performing screen removal and cleaning services.',
+      imgSrc: '/img/moss-monsters/moss-monster-washing-windows.jpg',
+      imgAlt: 'A happy moss monster washing your windows - how helpful!'
     },
     {
       title: 'Commercial Recurring Services',
-      content: 'MossAway offers commercial recurring services at a discounted rate, depending on the term of the contract. We always offer our first cleaning with no commitment so that our recurring service clients have the opportunity to evaluate our work before committing to the term. Residential properties are the only exception, as we only offer annual and semi-annual services, both of which are discounted to the same rate. For information on recurring service discounts, customers should call or email us.'
+      content: 'MossAway offers commercial recurring services at a discounted rate, depending on the term of the contract. We always offer our first cleaning with no commitment so that our recurring service clients have the opportunity to evaluate our work before committing to the term. Residential properties are the only exception, as we only offer annual and semi-annual services, both of which are discounted to the same rate. For information on recurring service discounts, customers should call or email us.',
+      imgSrc: '/img/moss-monsters/moss-monster-washing-a-window-1.jpg',
+      imgAlt: 'A moss monster washing a steamy window'
     },
     {
       title: 'Interior and Exterior Services',
-      content: 'MossAway offers interior and exterior window cleaning services for properties up to 4 floors. For larger projects, we can refer our clients to one of our commercial window cleaning service partners in Victoria. We try to limit the amount of ladder window cleaning to as close to zero as possible, reducing the risk of accidental damage to the home and worker injury, providing our clients with extra safety and peace of mind.'
+      content: 'MossAway offers interior and exterior window cleaning services for properties up to 4 floors. For larger projects, we can refer our clients to one of our commercial window cleaning service partners in Victoria. We try to limit the amount of ladder window cleaning to as close to zero as possible, reducing the risk of accidental damage to the home and worker injury, providing our clients with extra safety and peace of mind.',
+      imgSrc: '/img/moss-monsters/moss-monster-in-a-hard-hat.jpg',
+      imgAlt: 'A moss monster in a hard hat'
     }
   ]
 };
@@ -94,15 +116,21 @@ export const gutterCleaning = {
   sections: [
     {
       title: 'Specialized Gutter Vacuuming Services',
-      content: 'MossAway uses specialized high-powered gutter vacuums to remove debris and buildup from gutters quickly and effectively. This method reduces the likelihood of damage to the gutters, surrounding roof, and property, and allows us to reach places that other companies can’t. We also offer traditional hand-cleaning for hard-to-reach areas.'
+      content: 'MossAway uses specialized high-powered gutter vacuums to remove debris and buildup from gutters quickly and effectively. This method reduces the likelihood of damage to the gutters, surrounding roof, and property, and allows us to reach places that other companies can’t. We also offer traditional hand-cleaning for hard-to-reach areas.',
+      imgSrc: '/img/moss-monsters/moss-monster-living-in-your-gutters.jpg',
+      imgAlt: 'A moss monster living in your clogged gutters'
     },
     {
       title: 'Rope & Harness Cleaning',
-      content: 'Our staff are trained and certified to use rope and harness equipment as required by WorkSafeBC. This ensures that our team can safely access and clean gutters on high buildings, steep roofs, and other challenging locations. This approach reduces the risk of injury and property damage, and helps us deliver high-quality results on every job.'
+      content: 'Our staff are trained and certified to use rope and harness equipment as required by WorkSafeBC. This ensures that our team can safely access and clean gutters on high buildings, steep roofs, and other challenging locations. This approach reduces the risk of injury and property damage, and helps us deliver high-quality results on every job.',
+      imgSrc: '/img/moss-monsters/moss-monster-in-a-hard-hat-3.jpg',
+      imgAlt: 'A moss monster taking safety very seriously'
     },
     {
       title: 'Gutter Cleaning for the Greater Victoria Region',
-      content: 'MossAway serves the Greater Victoria Region, including various municipalities and neighborhoods. We offer free quotes for all projects, big and small, and strive to provide the most affordable quality service in the region. Contact us today to schedule your gutter cleaning appointment!'
+      content: 'MossAway serves the Greater Victoria Region, including various municipalities and neighborhoods. We offer free quotes for all projects, big and small, and strive to provide the most affordable quality service in the region. Contact us today to schedule your gutter cleaning appointment!',
+      imgSrc: '/img/moss-monsters/moss-monster-trying-to-understand-a-map.jpg',
+      imgAlt: 'A moss monster trying to understand a map of Victoria'
     }
   ]
 };

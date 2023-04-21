@@ -16,9 +16,6 @@ import ButtonCTA from './ButtonCTA.astro'
         <ButtonCTA href='/contact'>Get in Touch</ButtonCTA>
       </div>
       <div>
-        <p class='text-gray-700 mb-4'>
-          <strong>Address:</strong> 123 Main St, Victoria, BC V8W 2J5
-        </p>
         <p class='text-gray-700 mb-4 cursor-pointer'>
           <strong>Phone:</strong>
           <a href={`tel:${phone.primary}`}>{phone.primary}</a>
@@ -28,7 +25,10 @@ import ButtonCTA from './ButtonCTA.astro'
           <a href={`mailto:${email.primary}`}>{email.primary}</a>
         </p>
         <p class='text-gray-700 mb-4'>
-          <strong>Business Hours:</strong> Monday-Friday 9am-5pm
+          <strong>Contact Hours:</strong> Monday-Friday 9am-5pm
+        </p>
+        <p class='text-gray-700 mb-4'>
+          <strong>Area of Operations:</strong> Greater Victoria Area, BC
         </p>
       </div>
     </div>

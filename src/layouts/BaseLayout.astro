@@ -1,6 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro'
 import BaseHeader from '../components/BaseHeader.astro'
+import SiteFooter from '../components/SiteFooter.astro'
 import '../styles/global.css'
 import { inject } from '@vercel/analytics'
 inject()
@@ -34,7 +35,10 @@ const {
     >
       <slot name='header' />
     </BaseHeader>
-    <slot />
+    <div class='m-6'>
+      <slot />
+    </div>
+    <SiteFooter />
     <slot name='scripts' />
   </body>
 </html>

@@ -1,62 +1,53 @@
 ---
-import RequestQuoteForm from '../components/WebForm.astro'
 import CTAButton from '../components/ButtonCTA.astro'
-import CancelButton from '../components/ButtonCancel.astro'
-import PrimaryButton from '../components/PrimaryButton.astro'
-import Testimonial from '../components/Testimonial.astro'
-import InfoSectionLeft from '../components/InfoSectionL.astro'
-import InfoSectionRight from '../components/InfoSectionR.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { mossRemoval } from '../consts/pages'
-const { h1, title, description } = mossRemoval
+const { h1, title, description, sections } = mossRemoval
 ---
 
 <BaseLayout h1={h1} title={title} description={description}>
-  <section id='services'>
-    <h2>Our Services</h2>
-    <InfoSectionLeft
-      imageSrc='https://via.placeholder.com/800x600'
-      imageAlt='Service 1'
-      heading='Service 1'
-      description='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.'
-    />
-    <InfoSectionRight
-      imageSrc='https://via.placeholder.com/800x600'
-      imageAlt='Service 2'
-      heading='Service 2'
-      description='Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.'
-    />
-    <InfoSectionLeft
-      imageSrc='https://via.placeholder.com/800x600'
-      imageAlt='Service 3'
-      heading='Service 3'
-      description='Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta.'
-    />
-  </section>
-
-  <RequestQuoteForm />
-
-  <section id='testimonials'>
-    <h2>Testimonials</h2>
-    <Testimonial
-      photoSrc='https://via.placeholder.com/100x100'
-      customerName='John Doe'
-      quote='Roof Moss Removal did a fantastic job! Our roof looks brand new!'
-    />
-    <Testimonial
-      photoSrc='https://via.placeholder.com/100x100'
-      customerName='Jane Smith'
-      quote='The team was professional and efficient. Highly recommend their services.'
-    />
-  </section>
-
-  <section id='cta'>
-    <h2>Ready to get started?</h2>
-    <CTAButton text='Get a Free Quote' />
-  </section>
-
-  <section id='buttons'>
-    <PrimaryButton text='Primary' />
-    <CancelButton text='Cancel' />
+  <div class='prose prose-xl mx-auto'>
+    <p class='text-center'>
+      Looking for expert roof moss removal services in Victoria, BC? MossAway
+      uses a delicate hand brushing technique and pole brush work to safely and
+      effectively remove moss from your roof. Our eco-friendly treatment
+      solution, the West Coast Wash, ensures your roof stays moss-free for years
+      to come.
+    </p>
+  </div>
+  <div class='flex justify-center mt-8 mb-20'>
+    <CTAButton href='/request-quote'>Request A Free Quote</CTAButton>
+  </div>
+  <section>
+    {
+      sections.map((section, index) => (
+        <div class='mb-8 p-4 max-w-5xl mx-auto'>
+          <article class='grid grid-cols-1 md:grid-cols-5 mb-6 text-center'>
+            <div
+              class={`col-span-2 flex items-center justify-center px-6 ${
+                index % 2 === 0 ? 'md:order-last' : ''
+              }`}
+            >
+              <img
+                src={section.imgSrc}
+                alt={section.imgAlt}
+                class='rounded-lg shadow mb-6'
+              />
+            </div>
+            <div class='col-span-3'>
+              <div class='prose prose-xl'>
+                <h3 class='px-4 mb-4'>{section.title}</h3>
+                <p>{section.content}</p>
+              </div>
+              <div class='flex justify-center my-10'>
+                <CTAButton href='/request-quote'>
+                  Request A Free Quote
+                </CTAButton>
+              </div>
+            </div>
+          </article>
+        </div>
+      ))
+    }
   </section>
 </BaseLayout>
