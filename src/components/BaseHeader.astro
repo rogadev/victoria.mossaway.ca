@@ -1,24 +1,18 @@
 ---
 import SiteNavbar from '../components/SiteNavbar.svelte'
-const { bgImage, overlayColor, overlayIntensity, h1, h2 } = Astro.props
+const { h1 } = Astro.props
 ---
 
-<header aria-label="Page header">
+<header aria-label='Page header'>
   <SiteNavbar client:load />
-  <div id="header-content">
+  <div id='header-content'>
     <h1>{h1}</h1>
-    <h2>{h2}</h2>
     <slot />
   </div>
 </header>
 
 <style>
   header {
-    --bg-image: url(${bgImage});
-    --overlay-color: ${overlayColor};
-    --overlay-intensity: ${overlayIntensity};
-
-    background-image: linear-gradient(rgba(var(--overlay-color), var(--overlay-intensity)), rgba(var(--overlay-color), var(--overlay-intensity))), var(--bg-image);
     background-size: cover;
     background-position: center;
     color: #fff;

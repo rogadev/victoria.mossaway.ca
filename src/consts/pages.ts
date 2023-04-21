@@ -113,7 +113,7 @@ export const faq = {
   title: 'Frequently Asked Questions, Promotions, & Blog | MossAway',
   description: 'Find answers to frequently asked questions about exterior cleaning services and stay up-to-date with the latest events, announcements, and promotions from MossAway. Subscribe to our newsletter to receive exclusive discounts and offers!',
   keywords: 'exterior cleaning FAQs, blog, events, promotions, newsletter',
-  h1: 'Frequently Asked Questions and Blog',
+  h1: 'Frequently Asked Questions & Blog',
 };
 
 export const contact = {

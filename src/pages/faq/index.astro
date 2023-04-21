@@ -1,52 +1,76 @@
 ---
-import BaseHead from '../../components/BaseHead.astro'
+import { getCollection } from 'astro:content'
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts'
+import { faq } from '../../consts/pages'
+import Head from '../../components/BaseHead.astro'
 import Header from '../../components/BaseHeader.astro'
 import Footer from '../../components/SiteFooter.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts'
-import { getCollection } from 'astro:content'
 import FormattedDate from '../../components/FormattedDate.astro'
 
-const posts = (await getCollection('faq')).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
-)
+const { h1 } = faq
+
+const allPosts = (await getCollection('faq')).sort((a, b) => {
+  // Ensure it's a date
+  a.data.pubDate = new Date(a.data.pubDate)
+  b.data.pubDate = new Date(b.data.pubDate)
+  // If for some reason we're getting a NaN, set it to the current date (hacky fix)
+  if (isNaN(a.data.pubDate.valueOf())) a.data.pubDate = new Date()
+  if (isNaN(b.data.pubDate.valueOf())) b.data.pubDate = new Date()
+  // Sort by date
+  return b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+})
+
+// Posts up until today (not future posts)
+const posts = allPosts.filter((post) => {
+  const today = new Date()
+  const postDate = new Date(post.data.pubDate)
+  return postDate.valueOf() <= today.valueOf()
+})
 ---
 
 <!DOCTYPE html>
 <html lang='en'>
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-      ul {
-        list-style-type: none;
-        padding: unset;
-      }
-      ul li {
-        display: flex;
-      }
-      ul li :global(time) {
-        flex: 0 0 130px;
-        font-style: italic;
-        color: #595959;
-      }
-      ul li a:visited {
-        color: #8e32dc;
-      }
-    </style>
+    <Head title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <Header />
-    <main>
-      <section>
-        <ul>
-          {
-            posts.map((post) => (
-              <li>
-                <FormattedDate date={post.data.pubDate} />
-                <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
-              </li>
-            ))
-          }
-        </ul>
+    <Header h1={h1} />
+    <main class='m-4 container'>
+      <section class='p-4 flex flex-col gap-4'>
+        {
+          posts.map((post) => (
+            <a
+              href={`/faq/${post.slug}/`}
+              class='grid grid-cols-12 gap-4 border border-text transition-all rounded py-3 px-6 shadow hover:shadow-lg hover:bg-primary hover:bg-opacity-[0.02] hover:-translate-y-[1px] max-w-screen-md mx-auto'
+            >
+              <div class='col-span-12 md:col-span-9 flex justify-between gap-4'>
+                <div>
+                  <div class='flex justify-between gap-4 mb-2'>
+                    <div>
+                      <h2 class='text-xl font-semibold prose prose-xl'>
+                        {post.data.title}
+                      </h2>
+                      <small class='text-text text-opacity-60'>
+                        <FormattedDate date={post.data.pubDate} />
+                      </small>
+                    </div>
+                    <img
+                      class='block md:hidden my-auto ml-4 h-20 rounded-full'
+                      src={post.data.imgSrc}
+                      alt={post.data.imgAlt}
+                    />
+                  </div>
+                  <p class='prose prose-lg mr-4'>{post.data.description}</p>
+                </div>
+              </div>
+              <img
+                class='hidden md:block my-auto rounded col-span-3 max-h-44 ml-auto'
+                src={post.data.imgSrc}
+                alt={post.data.imgAlt}
+              />
+            </a>
+          ))
+        }
       </section>
     </main>
     <Footer />
