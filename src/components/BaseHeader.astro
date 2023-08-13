@@ -3,46 +3,13 @@ import SiteNavbar from '../components/SiteNavbar.svelte'
 const { h1 } = Astro.props
 ---
 
-<header aria-label='Page header'>
+<header
+  aria-label='Page header'
+  class='bg-center bg-cover text-white text-center'
+>
   <SiteNavbar client:load />
-  <div id='header-content'>
-    <h1>{h1}</h1>
+  <div id='header-content' class='p-8'>
+    <h1 class='text-3xl font-extrabold leading-none mb-5 sm:text-4xl'>{h1}</h1>
     <slot />
   </div>
 </header>
-
-<style>
-  header {
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-  }
-
-  #header-content {
-    padding: 2rem;
-  }
-
-  h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
-
-  @media (min-width: 640px) {
-    h1 {
-      font-size: 4rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-  }
-</style>
