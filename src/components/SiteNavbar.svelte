@@ -9,7 +9,7 @@
   }
 </script>
 
-<div class="bg-background shadow-md mb-6">
+<div class="bg-background shadow-md mb-6 py-2">
   <div class="container mx-auto px-4 py-3 flex justify-between items-center">
     <a href="/">
       <img
@@ -23,7 +23,7 @@
       {#each pages as page}
         <a
           href={page.link}
-          class="text-lg text-text font-semibold nav-link"
+          class="text-md text-text font-semibold nav-link"
           aria-label={page.name}
           rel="noopener"
           tabindex="0"
