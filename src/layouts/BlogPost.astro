@@ -17,11 +17,19 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props
 
   <body>
     <BaseHeader />
-    <main class='m-6'>
+    <main class='m-6 -mt-8'>
       <article>
-        {heroImage && <img width={720} height={360} src={heroImage} alt='' />}
-        <h1 class='title'>{title}</h1>
-        <FormattedDate date={pubDate} />
+        <section id='header-image' class='mb-6'>
+          {
+            heroImage && (
+              <img
+                src={heroImage}
+                alt=''
+                class='h-full md:h-[25vw] max-h-[375x] mx-auto'
+              />
+            )
+          }
+        </section>
         {
           updatedDate && (
             <div class='last-updated-on'>
@@ -32,6 +40,11 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props
         <hr />
         <div class='prose prose-lg mx-auto mt-6 px-4 lg:prose-xl xl:prose-2xl'>
           <slot />
+        </div>
+        <div
+          class='prose prose-lg mx-auto mt-6 px-4 lg:prose-xl xl:prose-2xl text-right'
+        >
+          <FormattedDate date={pubDate} />
         </div>
       </article>
     </main>
