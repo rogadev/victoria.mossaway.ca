@@ -5,9 +5,9 @@ export const companyLegalName = "MossAway Services Inc.";
 export const address = "1234 MossAway Way, Victoria, BC, V8V 8V8";
 
 export const phone = {
-  primary: '250-555-5555',
-  billing: '250-555-5555',
-  payments: '250-555-5555',
+  primary: '778-676-6462',
+  billing: '778-676-6462',
+  payments: '778-676-6462',
 };
 
 export const email = {
